@@ -26,6 +26,7 @@
         font-size: 2.2em;
         padding: 10px;
         margin-top: 3%;
+        line-height: 110%;
         font-family: 'Cinzel', serif;
     }
 
