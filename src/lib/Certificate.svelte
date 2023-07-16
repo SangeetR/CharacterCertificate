@@ -6,6 +6,7 @@
     export let streamClass = '12th Science';
     export let doj;
     export let dol;
+    export let sr;
 </script>
 
 <div class="certificate">
@@ -13,7 +14,7 @@
     <p class="cert">Character Certificate</p>
     <p class="date">Date : {certDate.toString()}</p>
     <div class="content">
-        <p>It is certified that <strong> {name} </strong> Son/Daughter of shree <strong> {father} </strong> was a regular student during the year <strong> {doj} </strong> to <strong> {dol} </strong> and has passed class <strong> {streamClass} </strong> from this school.</p>
+        <p>It is certified that <strong> {name} </strong> Son/Daughter of shree <strong> {father} </strong>, S.R. No. {sr} is a regular student during the year <strong> {doj} </strong> to <strong> {dol} </strong> and has passed class <strong> {streamClass} </strong> from this school.</p>
         <p>As per school record his/her character and conduct is good to my knowledge.</p>
         <p>I wish his/her success in future life.</p>
     </div>

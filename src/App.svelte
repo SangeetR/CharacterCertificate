@@ -12,10 +12,11 @@
   let doj;
   let dol;
   let one;
+  let sr;
 
   const addCertificate = () => 
   {
-    const student = {name, father, doj, dol, streamClass};
+    const student = {name, father, doj, dol, streamClass, sr};
     students = [student, ...students]
     one.focus()
   }
@@ -58,6 +59,9 @@
     <br>
     <label for="streamClass">Class(Stream)</label>
     <input type="text" name="streamClass" id="streamClass" bind:value={streamClass}>
+
+    <label for="sr">S.R. Number</label>
+    <input type="text" name="sr" id="sr" bind:value={sr}>
     
     <br>
     <button type="submit">Add Student</button>
@@ -65,7 +69,8 @@
   </form>
   <table class="no-print">
     <tr>
-      <th>Sr. No.</th>
+      <th>Serial</th>
+      <th>SR No.</th>
       <th>Name</th>
       <th>Father's Name</th>
       <th>Date of Admission</th>
@@ -76,6 +81,7 @@
     {#each students as student, i}
       <tr>
         <td>{i+1}</td>
+        <td>{student.sr}</td>
         <td>{student.name}</td>
         <td>{student.father}</td>
         <td>{student.doj}</td>
@@ -99,6 +105,7 @@
           streamClass = {student.streamClass}
           doj = {student.doj}
           dol = {student.dol}
+          sr= {student.sr}
         />
       </div>
     {/each}
