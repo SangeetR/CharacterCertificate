@@ -4,7 +4,7 @@
   let students = [
   ];
 
-  let schoolName = 'Rathi Public Sr. Sec. School Dhawas, Jaipur';
+  let schoolName = 'Rathi Public Sr. Sec. School Dhawas, Ajmer Road Jaipur';
   let certDate;
   let name;
   let father;
@@ -13,10 +13,11 @@
   let dol;
   let one;
   let sr;
+  let sex;
 
   const addCertificate = () => 
   {
-    const student = {name, father, doj, dol, streamClass, sr};
+    const student = {name, father, doj, dol, streamClass, sr, sex};
     students = [student, ...students]
     one.focus()
   }
@@ -62,6 +63,13 @@
 
     <label for="sr">S.R. Number</label>
     <input type="text" name="sr" id="sr" bind:value={sr}>
+
+    <br>
+    <label for="sex">Sex</label>
+    <select bind:value={sex} name="sex" id="sex">
+      <option value="m">Male</option>
+      <option value="f">Female</option>
+    </select>
     
     <br>
     <button type="submit">Add Student</button>
@@ -75,6 +83,7 @@
       <th>Father's Name</th>
       <th>Date of Admission</th>
       <th>Result Date</th>
+      <th>Sex</th>
       <th></th>
     </tr>
     
@@ -86,6 +95,7 @@
         <td>{student.father}</td>
         <td>{student.doj}</td>
         <td>{student.dol}</td>
+        <td>{student.sex}</td>
         <td class="del" on:click= {()=> {delStu(i)} }>Delete</td>
       </tr>
     {/each}
@@ -106,6 +116,7 @@
           doj = {student.doj}
           dol = {student.dol}
           sr= {student.sr}
+          sex={student.sex}
         />
       </div>
     {/each}
